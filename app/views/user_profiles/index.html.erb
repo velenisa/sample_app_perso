@@ -1,0 +1,33 @@
+<% provide(:title, "User Profiles") %> 
+<h1>User Profiles</h1>
+
+<%= will_paginate %>
+
+<table class="table">
+  <tr>
+    <th>Profile code</th>
+    <th>Profile name</th>
+    <th>Profile active</th>
+    <th>Profile admin</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @user_profiles.each do |user_profile| %>
+  <tr>
+    <td><%= user_profile.profile_code %></td>
+    <td><%= user_profile.profile_name %></td>
+    <td><%= user_profile.profile_active %></td>
+    <td><%= user_profile.profile_admin %></td>
+    <td><%= link_to 'Show', user_profile %></td>
+    <td><%= link_to 'Edit', edit_user_profile_path(user_profile) %></td>
+    <td><%= link_to 'Destroy', user_profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New User profile', new_user_profile_path %>
+<%= will_paginate %>

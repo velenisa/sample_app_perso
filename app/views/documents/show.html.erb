@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<%= @document.name %>
+
+<p>
+<%= image_tag @document.image.url(:large) %>
+</p>
+
+<%= link_to 'Edit', edit_case_document_path(@case, @document) %> |
+<%= link_to 'Back', @case %>

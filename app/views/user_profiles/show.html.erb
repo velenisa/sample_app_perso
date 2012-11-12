@@ -1,0 +1,26 @@
+<% provide(:title, 'View User Profile') %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Profile code:</b>
+  <%= @user_profile.profile_code %>
+</p>
+
+<p>
+  <b>Profile name:</b>
+  <%= @user_profile.profile_name %>
+</p>
+
+<p>
+  <b>Profile active:</b>
+  <%= @user_profile.profile_active %>
+</p>
+
+<p>
+  <b>Profile admin:</b>
+  <%= @user_profile.profile_admin %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_profile_path(@user_profile) %> |
+<%= link_to 'Back', user_profiles_path %>

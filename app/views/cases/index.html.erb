@@ -1,0 +1,27 @@
+<% provide(:title, 'My Cases') %>
+<h1>Case List</h1>
+
+<td><%= link_to 'New Case', new_case_path %></td>
+<%= will_paginate %>
+<table class="table">
+  <tr>
+    <th>Number</th>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @cases.each do |kase| %>
+  <tr>
+    <td><%= kase.number %></td>
+    <td><%= kase.name %></td>
+    <td><%= link_to 'Show', kase %></td>
+    <td><%= link_to 'Edit', edit_case_path(kase) %></td>
+    <td><%= link_to 'Destroy', kase, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+<%= will_paginate %>
+
+

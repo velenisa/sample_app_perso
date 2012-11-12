@@ -1,0 +1,16 @@
+<div class="center hero-unit">
+
+
+
+<% if signed_in? %> 
+		<h1>ScanCentral Server</h1>
+	<h2>Welcome to TrustScan-Solutions Home Page</h2>
+
+  <% else %>
+		<h1>ScanCentral Server</h1>
+	<h2>Welcome to TrustScan-Solutions Home Page</h2>
+	<!--a href="http://www.trustscan-solutions.com/2/contact_337702.html">request for sign-up!</a-->
+	<%= link_to "Sign up now!", href="http://www.trustscan-solutions.com/2/contact_337702.html", class: "btn btn-large btn-primary" %>
+   <% end %>
+</div>
+
